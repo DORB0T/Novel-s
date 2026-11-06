@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#100e1c">
+<title>Томік — манга, манхва та новели</title>
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header class="top"><nav class="nav"><a class="logo" href="#">томі<em>к.</em></a><div class="links"><a class="active" href="#home">Головна</a><a href="#catalog">Каталог</a><a href="#updates">Оновлення</a></div><label class="search"><input id="search" placeholder="Назва або автор..." autocomplete="off"><span>⌕</span></label><button class="avatar" title="Мій профіль">Т</button></nav></header>
+<main class="wrap" id="home">
+<section class="hero"><div class="hero-art"></div><div class="hero-copy"><div class="eyebrow"><i></i> Історія тижня</div><h1>Там, де місяць<br>торкається моря</h1><div class="pills"><span class="pill">Манхва</span><span class="pill">Фентезі</span><span class="pill">Романтика</span><span class="pill">⭐ 9.8</span></div><p>Юна картографка знаходить на березі карту, що змінює обриси світу щоночі. Таємниці, магія і почуття, які сильніші за приплив.</p><div class="actions"><button class="btn" onclick="openReader('Там, де місяць торкається моря')">▶&nbsp; Читати зараз</button><button class="btn secondary" onclick="toggleFavorite('Там, де місяць торкається моря')">＋&nbsp; До бібліотеки</button></div><div class="dots"><b></b><b></b><b></b><b></b></div></div></section>
+<div class="section-head"><h2>Знайди свою історію</h2><a href="#catalog">Увесь каталог&nbsp; →</a></div><div class="genres" id="genres"></div>
+<div class="shelves"><section><div class="section-head"><h2>Популярне цього тижня</h2><a href="#catalog">Більше&nbsp; →</a></div><div class="cards" id="featured"></div></section><aside class="rank-panel"><div class="section-head"><h2>Топ читають</h2><a href="#">Тиждень⌄</a></div><div id="ranking"></div></aside></div>
+<section class="catalog" id="catalog"><div class="section-head"><h2>Каталог історій</h2><a href="#" onclick="clearFilters();return false">Скинути фільтри</a></div><div class="tabs"><button class="tab active" data-type="Усі">Усі історії</button><button class="tab" data-type="Манга">Манга</button><button class="tab" data-type="Манхва">Манхва</button><button class="tab" data-type="Манхуа">Манхуа</button><button class="tab" data-type="Новела">Новели</button></div><div class="filters"><select id="genreFilter"><option value="Усі жанри">Усі жанри</option><option>Фентезі</option><option>Романтика</option><option>Екшн</option><option>Драма</option><option>Комедія</option><option>Пригоди</option></select><select id="statusFilter"><option value="Усі статуси">Усі статуси</option><option>Виходить</option><option>Завершено</option><option>Анонс</option></select><select id="sortFilter"><option value="Популярністю">За популярністю</option><option>За рейтингом</option><option>За назвою</option></select></div><div class="cards" id="catalogCards"></div></section>
+<section class="catalog" id="updates"><div class="section-head"><h2>Свіжі розділи</h2><a href="#">Усі оновлення&nbsp; →</a></div><div class="updates" id="updatesList"></div></section>
+<footer class="footer"><span>томі<em style="color:var(--mint);font-style:normal">к.</em> — твій простір історій</span><span>Про проєкт &nbsp; · &nbsp; Правила &nbsp; · &nbsp; Зворотний зв'язок</span><span>© 2025 Томік</span></footer>
+</main>
+<div class="overlay" id="reader"><div class="reader"><div class="reader-top"><button onclick="closeReader()">← Назад</button><strong id="readerTitle">Назва історії</strong><button onclick="toggleFavorite(document.getElementById('readerTitle').textContent)">♡ Зберегти</button></div><div class="reader-body"><div class="fake-page" id="fakePage"></div><p style="color:var(--muted)">Це демо читалки. Тут з'являтимуться сторінки розділу.</p></div><div class="reader-controls"><button class="btn secondary" onclick="toast('Ви вже на початку розділу')">← Попередній</button><select><option>Розділ 1</option><option>Розділ 2</option><option>Розділ 3</option></select><button class="btn" onclick="toast('Наступний розділ завантажено')">Наступний →</button></div></div></div><div class="toast" id="toast"></div>
+<script src="data.js"></script><script src="app.js"></script>
+</body></html>
+
